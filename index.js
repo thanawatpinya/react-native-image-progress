@@ -197,7 +197,7 @@ export const createImageProgress = ImageComponent =>
       }
 
       return (
-        <View style={style} ref={this.handleRef}>
+        <View ref={this.handleRef}>
           <ImageComponent
             {...props}
             key={source && source.uri}
@@ -206,7 +206,7 @@ export const createImageProgress = ImageComponent =>
             onError={this.handleError}
             onLoad={this.handleLoad}
             source={source}
-            style={StyleSheet.absoluteFill}
+            style={style}
           />
           {indicatorElement}
           {children}
